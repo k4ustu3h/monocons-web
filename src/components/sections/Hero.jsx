@@ -55,12 +55,9 @@ export default function Hero() {
 							gap: "1rem",
 						}}
 					>
-						<M3eButton
-							href="https://github.com/k4ustu3h/monocons-android/releases/latest"
-							variant="filled"
-						>
+						<M3eButton href="#download" variant="filled">
 							<Download slot="icon" />
-							Download Latest
+							Download
 						</M3eButton>
 						<M3eButton
 							href="https://github.com/k4ustu3h/monocons-android"
