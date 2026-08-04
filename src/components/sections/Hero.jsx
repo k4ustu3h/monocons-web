@@ -40,7 +40,10 @@ export default function Hero() {
 				>
 					<Monocons height={100} width={100} />
 					<M3eHeading variant="display">Monocons</M3eHeading>
-					<M3eHeading style={{ textAlign: "center", width: "70%" }}>
+					<M3eHeading
+						style={{ textAlign: "center", width: "70%" }}
+						variant="title"
+					>
 						Monocons is a monochrome icon pack that provides uniform
 						icons for applications. The designs are modeled after
 						each app's official monochrome icon, or the brand's logo
