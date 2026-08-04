@@ -20,7 +20,7 @@ export default function Hero() {
 				style={{
 					alignItems: "center",
 					backgroundColor:
-						"var(--md-sys-color-surface-container-high)",
+						"var(--md-sys-color-surface-container-lowest)",
 					borderRadius: "var(--md-sys-shape-corner-value-large)",
 					boxSizing: "border-box",
 					display: "flex",
