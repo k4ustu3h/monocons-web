@@ -1,7 +1,8 @@
 import { googleSansFlex } from "@/app/fonts";
 
 import "@/styles/index.css";
-import ThemeWrapper from "@/components/pages/theme/ThemeWrapper";
+
+import ThemeWrapper from "@/components/theme/ThemeWrapper";
 
 export const metadata = {
 	title: "Monocons",
