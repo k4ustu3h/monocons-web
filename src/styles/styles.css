@@ -1,3 +1,13 @@
+body {
+	background-color: var(--md-sys-color-surface, #131316);
+	margin: 0;
+}
+
 m3e-theme {
 	font-family: var(--font-google-sans-flex), sans-serif;
+}
+
+:not(:defined) {
+	opacity: 0;
+	visibility: hidden;
 }
