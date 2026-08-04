@@ -1,6 +1,6 @@
 import { googleSansFlex } from "@/app/fonts";
 
-import "@/styles/index.css";
+import "@/styles/styles.css";
 
 import ThemeWrapper from "@/components/theme/ThemeWrapper";
 
