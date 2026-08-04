@@ -4,7 +4,7 @@
 		{
 			"title": "Localize Monocons",
 			"description": "Help us speak your language.",
-			"icon": "ic_translate",
+			"icon": "translate",
 			"url": "https://github.com/LawnchairLauncher/lawnicons/issues/3546",
 			"location": "home"
 		}
