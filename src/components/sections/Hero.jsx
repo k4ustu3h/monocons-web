@@ -1,6 +1,8 @@
 import { M3eButton } from "@m3e/react/button";
 import { M3eHeading } from "@m3e/react/heading";
 
+import SiGithub from "@icons-pack/react-simple-icons/icons/SiGithub";
+
 import { Download } from "@nine-thirty-five/material-symbols-react/rounded";
 
 import Monocons from "@/assets/svgs/Monocons";
@@ -55,6 +57,7 @@ export default function Hero() {
 							href="https://github.com/k4ustu3h/monocons-android"
 							variant="tonal"
 						>
+							<SiGithub slot="icon" />
 							View on GitHub
 						</M3eButton>
 					</div>
