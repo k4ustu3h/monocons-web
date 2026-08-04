@@ -1,6 +1,6 @@
-import Image from "next/image";
-
 import { M3eHeading } from "@m3e/react/heading";
+
+import Monocons from "@/assets/svgs/Monocons";
 
 export default function Hero() {
 	return (
@@ -15,12 +15,7 @@ export default function Hero() {
 					justifyContent: "center",
 				}}
 			>
-				<Image
-					alt="Monocons Icon"
-					height={100}
-					src="/icon.svg"
-					width={100}
-				/>
+				<Monocons height={100} width={100} />
 				<M3eHeading variant="display">Monocons</M3eHeading>
 			</div>
 		</section>
