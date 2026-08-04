@@ -1,6 +1,8 @@
 import { M3eButton } from "@m3e/react/button";
 import { M3eHeading } from "@m3e/react/heading";
 
+import { Download } from "@nine-thirty-five/material-symbols-react/rounded";
+
 import Monocons from "@/assets/svgs/Monocons";
 
 export default function Hero() {
@@ -46,6 +48,7 @@ export default function Hero() {
 							href="https://github.com/k4ustu3h/monocons-android/releases/latest"
 							variant="filled"
 						>
+							<Download slot="icon" />
 							Download Latest
 						</M3eButton>
 						<M3eButton
