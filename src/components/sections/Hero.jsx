@@ -1,3 +1,4 @@
+import { M3eButton } from "@m3e/react/button";
 import { M3eHeading } from "@m3e/react/heading";
 
 import Monocons from "@/assets/svgs/Monocons";
@@ -35,6 +36,25 @@ export default function Hero() {
 				>
 					<Monocons height={100} width={100} />
 					<M3eHeading variant="display">Monocons</M3eHeading>
+					<div
+						style={{
+							display: "flex",
+							gap: "1rem",
+						}}
+					>
+						<M3eButton
+							href="https://github.com/k4ustu3h/monocons-android/releases/latest"
+							variant="filled"
+						>
+							Download Latest
+						</M3eButton>
+						<M3eButton
+							href="https://github.com/k4ustu3h/monocons-android"
+							variant="tonal"
+						>
+							View on GitHub
+						</M3eButton>
+					</div>
 				</div>
 			</div>
 		</section>
