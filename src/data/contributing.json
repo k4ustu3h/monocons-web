@@ -1,0 +1,23 @@
+[
+	{
+		"title": "Sponsor Us",
+		"icon": "sponsor",
+		"description": "Monocons is a community-driven project. Sponsor us on GitHub to help maintain and grow the icon pack.",
+		"href": "/sponsors",
+		"buttonText": "Become a Sponsor"
+	},
+	{
+		"title": "Contribute Icons",
+		"icon": "contribute",
+		"description": "Want to add missing icons? Read our guidelines to ensure your designs perfectly match the Monocons aesthetic.",
+		"href": "https://github.com/k4ustu3h/monocons-android/blob/main/CONTRIBUTING.md",
+		"buttonText": "Read Guidelines"
+	},
+	{
+		"title": "Icon Requests",
+		"icon": "dashboard",
+		"description": "Can't find an icon for an app you use? Submit and track icon requests through our dedicated community dashboard.",
+		"href": "/dashboard",
+		"buttonText": "Open Dashboard"
+	}
+]

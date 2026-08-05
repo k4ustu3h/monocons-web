@@ -1,5 +1,6 @@
 "use client";
 
+import Contributing from "@/components/sections/Contributing";
 import Description from "@/components/sections/Description";
 import Download from "@/components/sections/Download";
 import Features from "@/components/sections/Features";
@@ -12,6 +13,7 @@ export default function Home() {
 			<Description />
 			<Features />
 			<Download />
+			<Contributing />
 		</>
 	);
 }
