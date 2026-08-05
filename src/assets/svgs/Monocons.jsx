@@ -6,7 +6,7 @@ export default function Monocons(props) {
 			viewBox="0 0 512 512"
 			xmlns="http://www.w3.org/2000/svg"
 		>
-			<g clip-path="url(#a)">
+			<g clipPath="url(#a)">
 				<circle cx="512" r="384" fill="#ffd600" />
 				<circle cx="512" cy="512" r="384" fill="#d50000" />
 				<circle cy="512" r="384" fill="#00c853" />
