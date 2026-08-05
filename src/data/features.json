@@ -1,0 +1,17 @@
+[
+	{
+		"title": "Accurate Designs",
+		"icon": "md",
+		"description": "Every icon is based on the application's official monochrome design, or the brand's primary logo when a monochrome version is unavailable."
+	},
+	{
+		"title": "Broad Compatibility",
+		"icon": "android",
+		"description": "Works seamlessly across modern Android launchers that support third-party icon packs."
+	},
+	{
+		"title": "Community Driven",
+		"icon": "github",
+		"description": "Actively maintained by the community. Request missing icons through the app or contribute your own designs directly on GitHub."
+	}
+]
