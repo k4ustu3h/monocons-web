@@ -4,34 +4,15 @@ import { M3eCard } from "@m3e/react/card";
 import SiGithub from "@icons-pack/react-simple-icons/icons/SiGithub";
 import SiObtainium from "@icons-pack/react-simple-icons/icons/SiObtainium";
 
+import downloadSources from "@/data/downloadSources.json";
+
 import IzzyOnDroid from "@/assets/svgs/IzzyOnDroid";
 
-const downloadSources = [
-	{
-		title: "GitHub",
-		icon: <SiGithub height={48} width={48} />,
-		description:
-			"Download the latest release directly from the GitHub releases page.",
-		href: "https://github.com/k4ustu3h/monocons-android/releases/latest",
-		buttonText: "Download Latest",
-	},
-	{
-		title: "IzzyOnDroid",
-		icon: <IzzyOnDroid height={48} width={48} />,
-		description:
-			"Download Monocons directly via the IzzyOnDroid F-Droid repository.",
-		href: "https://apt.izzysoft.de/fdroid/index/apk/k4ustu3h.monocons.izzy",
-		buttonText: "Get on IzzyOnDroid",
-	},
-	{
-		title: "Obtainium",
-		icon: <SiObtainium height={48} width={48} />,
-		description:
-			"Download Monocons using the Obtainium app to enable auto updates.",
-		href: "https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/k4ustu3h/monocons-android",
-		buttonText: "Get on Obtainium",
-	},
-];
+const iconMap = {
+	github: <SiGithub height={48} width={48} />,
+	izzyondroid: <IzzyOnDroid height={48} width={48} />,
+	obtainium: <SiObtainium height={48} width={48} />,
+};
 
 export default function Download() {
 	return (
@@ -39,6 +20,7 @@ export default function Download() {
 			id="download"
 			style={{
 				display: "flex",
+				flexWrap: "wrap",
 				gap: "2em",
 				justifyContent: "center",
 				padding: "2em",
@@ -54,7 +36,7 @@ export default function Download() {
 							gap: "0.5rem",
 						}}
 					>
-						{source.icon}
+						{iconMap[source.icon]}
 						{source.title}
 					</div>
 					<div slot="content">{source.description}</div>

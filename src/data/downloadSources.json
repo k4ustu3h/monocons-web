@@ -1,0 +1,23 @@
+[
+	{
+		"title": "GitHub",
+		"icon": "github",
+		"description": "Download the latest release directly from the GitHub releases page.",
+		"href": "https://github.com/k4ustu3h/monocons-android/releases/latest",
+		"buttonText": "Download Latest"
+	},
+	{
+		"title": "IzzyOnDroid",
+		"icon": "izzyondroid",
+		"description": "Download Monocons directly via the IzzyOnDroid F-Droid repository.",
+		"href": "https://apt.izzysoft.de/fdroid/index/apk/k4ustu3h.monocons.izzy",
+		"buttonText": "Get on IzzyOnDroid"
+	},
+	{
+		"title": "Obtainium",
+		"icon": "obtainium",
+		"description": "Download Monocons using the Obtainium app to enable auto updates.",
+		"href": "https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/k4ustu3h/monocons-android",
+		"buttonText": "Get on Obtainium"
+	}
+]
