@@ -13,5 +13,10 @@
 		"title": "Community Driven",
 		"icon": "github",
 		"description": "Actively maintained by the community. Request missing icons through the app or contribute your own designs directly on GitHub."
+	},
+	{
+		"title": "Based on Lawnicons",
+		"icon": "lawnicons",
+		"description": "Built on the foundation of Lawnicons. Core changes from every new Lawnicons release are continuously merged into Monocons."
 	}
 ]

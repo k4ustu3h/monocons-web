@@ -7,9 +7,12 @@ import SiMaterialdesign from "@icons-pack/react-simple-icons/icons/SiMaterialdes
 
 import featuresData from "@/data/features.json";
 
+import Lawnicons from "@/assets/svgs/Lawnicons";
+
 const iconMap = {
 	android: <SiAndroid height={48} width={48} />,
 	github: <SiGithub height={48} width={48} />,
+	lawnicons: <Lawnicons height={48} width={48} />,
 	md: <SiMaterialdesign height={48} width={48} />,
 };
 
