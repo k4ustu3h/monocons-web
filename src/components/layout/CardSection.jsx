@@ -52,7 +52,7 @@ export default function CardSection({
 							{iconMap[item.icon]}
 							{item.title}
 						</M3eHeading>
-						<div slot="content">{item.description}</div>
+						<p slot="content">{item.description}</p>
 						{item.href && item.buttonText && (
 							<div end="true" slot="actions">
 								<M3eButton href={item.href} variant="filled">
