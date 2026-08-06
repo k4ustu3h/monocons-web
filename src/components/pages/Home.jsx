@@ -4,6 +4,7 @@ import Contributing from "@/components/sections/Contributing";
 import Description from "@/components/sections/Description";
 import Download from "@/components/sections/Download";
 import Features from "@/components/sections/Features";
+import Footer from "@/components/sections/Footer";
 import Hero from "@/components/sections/Hero";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
 			<Features />
 			<Download />
 			<Contributing />
+			<Footer />
 		</>
 	);
 }
