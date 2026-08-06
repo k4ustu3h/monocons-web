@@ -7,6 +7,8 @@ import { Download } from "@nine-thirty-five/material-symbols-react/rounded";
 
 import Monocons from "@/assets/svgs/Monocons";
 
+import Showcase from "@/components/layout/Showcase";
+
 export default function Hero() {
 	return (
 		<section
@@ -27,15 +29,20 @@ export default function Hero() {
 					flexDirection: "column",
 					height: "100%",
 					justifyContent: "flex-end",
+					overflow: "hidden",
 					paddingBottom: "256px",
+					position: "relative",
 				}}
 			>
+				<Showcase />
 				<div
 					style={{
 						alignItems: "center",
 						display: "flex",
 						flexDirection: "column",
 						gap: "1rem",
+						position: "relative",
+						zIndex: 1,
 					}}
 				>
 					<Monocons height={100} width={100} />
