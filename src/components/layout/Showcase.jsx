@@ -13,7 +13,6 @@ export default function Showcase() {
 				gridTemplateColumns: "repeat(auto-fill, minmax(80px, 1fr))",
 				inset: 0,
 				justifyItems: "center",
-				opacity: 0.6,
 				padding: "2rem",
 				pointerEvents: "none",
 				position: "absolute",
