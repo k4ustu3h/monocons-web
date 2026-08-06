@@ -50,10 +50,7 @@ export default function Hero() {
 							<Download slot="icon" />
 							Download
 						</M3eButton>
-						<M3eButton
-							href="https://github.com/k4ustu3h/monocons-android"
-							variant="tonal"
-						>
+						<M3eButton href="/github-android" variant="tonal">
 							<SiGithub slot="icon" />
 							View on GitHub
 						</M3eButton>
