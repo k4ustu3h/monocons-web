@@ -12,10 +12,19 @@ export default function HeroOverlay() {
 		<div
 			style={{
 				alignItems: "center",
+				backdropFilter: "blur(24px)",
+				backgroundColor:
+					"color-mix(in srgb, var(--md-sys-color-surface-container-high) 75%, transparent)",
+				borderRadius: "var(--md-sys-shape-corner-value-large)",
+				boxSizing: "border-box",
 				display: "flex",
 				flexDirection: "column",
 				gap: "1rem",
+				margin: "0 1rem",
+				maxWidth: "calc(100% - 2rem)",
+				padding: "clamp(2rem, 5vw, 4rem)",
 				position: "relative",
+				textAlign: "center",
 				zIndex: 1,
 			}}
 		>
@@ -24,6 +33,8 @@ export default function HeroOverlay() {
 			<div
 				style={{
 					display: "flex",
+					flexWrap: "wrap",
+					justifyContent: "center",
 					gap: "1rem",
 				}}
 			>
