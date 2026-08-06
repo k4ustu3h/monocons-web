@@ -1,5 +1,6 @@
 import HeroOverlay from "@/components/layout/HeroOverlay";
 import Showcase from "@/components/layout/Showcase";
+import Wallpaper from "@/components/layout/Wallpaper";
 
 export default function Hero() {
 	return (
@@ -20,12 +21,14 @@ export default function Hero() {
 					display: "flex",
 					flexDirection: "column",
 					height: "100%",
+					isolation: "isolate",
 					justifyContent: "flex-end",
 					overflow: "hidden",
 					paddingBottom: "256px",
 					position: "relative",
 				}}
 			>
+				<Wallpaper />
 				<Showcase />
 				<HeroOverlay />
 			</div>
