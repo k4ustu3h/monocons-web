@@ -1,6 +1,8 @@
 import { M3eShape } from "@m3e/react/shape";
 
-export default function MonochromeIcon({ filename }) {
+export default function MonochromeIcon({ filename, onLoad }) {
+	const imageUrl = `https://raw.githubusercontent.com/k4ustu3h/monocons-android/main/svgs/${filename}`;
+
 	return (
 		<M3eShape
 			name="square"
@@ -9,6 +11,19 @@ export default function MonochromeIcon({ filename }) {
 				"--m3e-shape-size": "56px",
 			}}
 		>
+			<img
+				alt=""
+				onError={onLoad}
+				onLoad={onLoad}
+				src={imageUrl}
+				style={{
+					opacity: 0,
+					position: "absolute",
+					width: 0,
+					height: 0,
+				}}
+			/>
+
 			<div
 				style={{
 					alignItems: "center",
@@ -23,7 +38,7 @@ export default function MonochromeIcon({ filename }) {
 						style={{
 							backgroundColor: "var(--md-sys-color-on-surface)",
 							height: "32px",
-							WebkitMaskImage: `url('https://raw.githubusercontent.com/k4ustu3h/monocons-android/main/svgs/${filename}')`,
+							WebkitMaskImage: `url('${imageUrl}')`,
 							WebkitMaskPosition: "center",
 							WebkitMaskRepeat: "no-repeat",
 							WebkitMaskSize: "contain",
