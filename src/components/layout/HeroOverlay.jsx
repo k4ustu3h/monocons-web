@@ -29,7 +29,9 @@ export default function HeroOverlay() {
 			}}
 		>
 			<Monocons height={100} width={100} />
-			<M3eHeading variant="display">Monocons</M3eHeading>
+			<M3eHeading emphasized variant="display">
+				Monocons
+			</M3eHeading>
 			<div
 				style={{
 					display: "flex",
