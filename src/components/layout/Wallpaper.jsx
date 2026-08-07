@@ -1,12 +1,18 @@
 import Image from "next/image";
 
+import useWallpaper from "@/hooks/useWallpaper";
+
 export default function Wallpaper() {
+	const wallpaperUrl = useWallpaper();
+
+	if (!wallpaperUrl) return null;
+
 	return (
 		<Image
 			alt="Wallpaper"
 			fill
 			priority
-			src="https://picsum.photos/1920/1080"
+			src={wallpaperUrl}
 			style={{
 				objectFit: "cover",
 				zIndex: -1,
