@@ -5,7 +5,7 @@ import fetchIcons from "@/hooks/fetchIcons";
 import MonochromeIcon from "@/components/icons/MonochromeIcon";
 
 export default function Showcase() {
-	const { icons } = fetchIcons(200);
+	const { icons } = fetchIcons();
 
 	const [loadedCount, setLoadedCount] = useState(0);
 
