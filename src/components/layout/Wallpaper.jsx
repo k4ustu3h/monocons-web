@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-import useWallpaper from "@/hooks/useWallpaper";
+import useTheme from "@/hooks/context/useTheme";
 
 export default function Wallpaper() {
-	const wallpaperUrl = useWallpaper();
+	const { wallpaperUrl } = useTheme();
 
 	if (!wallpaperUrl) return null;
 

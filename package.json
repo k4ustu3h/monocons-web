@@ -9,6 +9,7 @@
 		"lint": "eslint"
 	},
 	"dependencies": {
+		"@evowizz/material-color-utilities-canary": "0.4.0-canary.1",
 		"@icons-pack/react-simple-icons": "13.13.0",
 		"@m3e/react": "2.7.3",
 		"@nine-thirty-five/material-symbols-react": "2.2.1",
