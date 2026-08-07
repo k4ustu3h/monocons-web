@@ -7,14 +7,11 @@ const CACHE_DURATION_MS = 24 * 60 * 60 * 1000;
 
 export default function fetchIcons() {
 	const [icons, setIcons] = useState([]);
-	const [isLoading, setIsLoading] = useState(true);
-
 	const count = 160;
 
 	useEffect(() => {
 		async function getIcons() {
 			try {
-				setIsLoading(true);
 				const now = Date.now();
 				const cachedData = localStorage.getItem(CACHE_KEY);
 
@@ -27,7 +24,6 @@ export default function fetchIcons() {
 								"Using cached Monocons. Icons will not change until cache expires.",
 							);
 							setIcons(filenames.slice(0, count));
-							setIsLoading(false);
 							return;
 						}
 					} catch (e) {
@@ -60,13 +56,11 @@ export default function fetchIcons() {
 				}
 			} catch (error) {
 				console.error("Failed to fetch showcase icons:", error);
-			} finally {
-				setIsLoading(false);
 			}
 		}
 
 		getIcons();
 	}, [count]);
 
-	return { icons, isLoading };
+	return { icons };
 }
