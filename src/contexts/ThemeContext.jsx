@@ -11,7 +11,7 @@ import { extractSeedColor } from "@/utils/monet";
 export default function ThemeContext({ children }) {
 	const wallpaperUrl = useWallpaper();
 
-	const [seedColor, setSeedColor] = useState(null);
+	const [seedColor, setSeedColor] = useState("#2962ff");
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {

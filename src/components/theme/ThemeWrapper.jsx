@@ -14,8 +14,9 @@ export default function ThemeWrapper({ children }) {
 	useEffect(() => {
 		setMounted(true);
 	}, []);
+
 	return (
-		<M3eTheme color={seedColor}>
+		<M3eTheme color={seedColor || "#2962ff"}>
 			<div
 				style={{
 					opacity: mounted ? 1 : 0,
