@@ -15,6 +15,11 @@ const nextConfig = {
 				permanent: true,
 			},
 			{
+				source: "/github-gnome",
+				destination: "https://github.com/k4ustu3h/monocons-gnome",
+				permanent: true,
+			},
+			{
 				source: "/sponsors",
 				destination: "https://github.com/sponsors/k4ustu3h",
 				permanent: true,
