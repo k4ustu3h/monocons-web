@@ -1,3 +1,5 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 import { googleSansFlex } from "@/app/fonts";
 
 import "@/styles/styles.css";
@@ -18,6 +20,7 @@ export default function RootLayout({ children }) {
 					<ThemeWrapper>{children}</ThemeWrapper>
 				</ThemeContext>{" "}
 			</body>
+			<GoogleAnalytics gaId="G-H4JCQXDZ0G" />
 		</html>
 	);
 }
