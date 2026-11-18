@@ -26,8 +26,8 @@ export default function Description() {
 			/>
 			<M3eHeading size="large" style={{ width: "25em" }} variant="title">
 				Monocons is a monochrome icon pack that provides uniform icons
-				for applications. The designs are modeled after each app's
-				official monochrome icon, or the brand's logo if a monochrome
+				for applications. The designs are modeled after each app&apos;s
+				official monochrome icon, or the brand&apos;s logo if a monochrome
 				variant does not exist.
 			</M3eHeading>
 		</section>
