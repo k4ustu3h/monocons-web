@@ -4,10 +4,18 @@ const GITHUB_API_URL =
 	"https://api.github.com/repos/k4ustu3h/monocons-android/contents/svgs";
 const CACHE_KEY = "monocons_showcase_cache";
 const CACHE_DURATION_MS = 24 * 60 * 60 * 1000;
+const COUNT = 160;
+
+function shuffle(array) {
+	for (let i = array.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[array[i], array[j]] = [array[j], array[i]];
+	}
+	return array;
+}
 
 export default function useFetchIcons() {
 	const [icons, setIcons] = useState([]);
-	const count = 160;
 
 	useEffect(() => {
 		async function getIcons() {
@@ -20,10 +28,7 @@ export default function useFetchIcons() {
 						const { timestamp, filenames } = JSON.parse(cachedData);
 
 						if (now - timestamp < CACHE_DURATION_MS) {
-							console.log(
-								"Using cached Monocons. Icons will not change until cache expires.",
-							);
-							setIcons(filenames.slice(0, count));
+							setIcons(filenames.slice(0, COUNT));
 							return;
 						}
 					} catch (e) {
@@ -31,7 +36,6 @@ export default function useFetchIcons() {
 					}
 				}
 
-				console.log("Cache expired or missing. Fetching new icons...");
 				const response = await fetch(GITHUB_API_URL);
 
 				if (response.ok) {
@@ -40,19 +44,20 @@ export default function useFetchIcons() {
 						.filter((file) => file.name.endsWith(".svg"))
 						.map((file) => file.name);
 
-					const shuffledFilenames = [...rawFilenames].sort(
-						() => 0.5 - Math.random(),
+					const shuffledFilenames = shuffle(rawFilenames).slice(
+						0,
+						COUNT,
 					);
 
 					localStorage.setItem(
 						CACHE_KEY,
 						JSON.stringify({
-							timestamp: now,
 							filenames: shuffledFilenames,
+							timestamp: now,
 						}),
 					);
 
-					setIcons(shuffledFilenames.slice(0, count));
+					setIcons(shuffledFilenames);
 				}
 			} catch (error) {
 				console.error("Failed to fetch showcase icons:", error);
@@ -60,7 +65,7 @@ export default function useFetchIcons() {
 		}
 
 		getIcons();
-	}, [count]);
+	}, []);
 
 	return { icons };
 }
