@@ -1,19 +1,21 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
 import { M3eTheme } from "@m3e/react/theme";
 
 import useTheme from "@/hooks/context/useTheme";
 
+const emptySubscribe = () => () => {};
+
 export default function ThemeWrapper({ children }) {
 	const { seedColor } = useTheme();
 
-	const [mounted, setMounted] = useState(false);
-
-	useEffect(() => {
-		setMounted(true);
-	}, []);
+	const mounted = useSyncExternalStore(
+		emptySubscribe,
+		() => true,
+		() => false,
+	);
 
 	return (
 		<M3eTheme color={seedColor || "#2962ff"} variant="expressive">
