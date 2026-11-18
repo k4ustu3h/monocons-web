@@ -1,8 +1,9 @@
+import { memo } from "react";
 import Image from "next/image";
 
 import { M3eShape } from "@m3e/react/shape";
 
-export default function MonochromeIcon({ filename, onLoad }) {
+function MonochromeIcon({ filename, onLoad }) {
 	const imageUrl = `https://raw.githubusercontent.com/k4ustu3h/monocons-android/main/svgs/${filename}`;
 
 	return (
@@ -55,3 +56,5 @@ export default function MonochromeIcon({ filename, onLoad }) {
 		</M3eShape>
 	);
 }
+
+export default memo(MonochromeIcon);
