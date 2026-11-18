@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { M3eShape } from "@m3e/react/shape";
 
 export default function MonochromeIcon({ filename, onLoad }) {
@@ -11,8 +13,9 @@ export default function MonochromeIcon({ filename, onLoad }) {
 				"--m3e-shape-size": "56px",
 			}}
 		>
-			<img
+			<Image
 				alt=""
+				height={0}
 				onError={onLoad}
 				onLoad={onLoad}
 				src={imageUrl}
@@ -22,6 +25,8 @@ export default function MonochromeIcon({ filename, onLoad }) {
 					width: 0,
 					height: 0,
 				}}
+				unoptimized
+				width={0}
 			/>
 
 			<div
