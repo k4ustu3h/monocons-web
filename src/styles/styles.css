@@ -16,6 +16,18 @@ m3e-heading[emphasized] {
 	font-weight: bold;
 }
 
+a {
+	color: inherit;
+}
+
+ol {
+	padding-left: 2rem;
+}
+
+li::marker {
+	font-size: var(--md-sys-typescale-headline-medium-font-size);
+}
+
 :not(:defined) {
 	opacity: 0;
 	visibility: hidden;
