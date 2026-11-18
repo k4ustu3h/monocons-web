@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Link from "next/link";
 
 import { M3eHeading } from "@m3e/react/heading";
@@ -6,8 +5,6 @@ import { M3eHeading } from "@m3e/react/heading";
 import Monocons from "@/assets/svgs/Monocons";
 
 export default function Footer() {
-	const [hovered, setHovered] = useState(false);
-
 	const year = new Date().getFullYear();
 
 	return (
@@ -70,11 +67,10 @@ export default function Footer() {
 					</M3eHeading>
 					<span>-</span>
 					<Link
+						className="privacy-link"
 						href="/privacy-policy"
-						onMouseEnter={() => setHovered(true)}
-						onMouseLeave={() => setHovered(false)}
 						style={{
-							textDecoration: hovered ? "underline" : "none",
+							textDecoration: "none",
 						}}
 					>
 						Privacy Policy

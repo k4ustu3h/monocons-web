@@ -20,6 +20,10 @@ a {
 	color: inherit;
 }
 
+.privacy-link:hover {
+	text-decoration: underline;
+}
+
 code {
 	background-color: var(--md-sys-color-surface-variant);
 }
