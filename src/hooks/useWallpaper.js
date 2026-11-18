@@ -1,15 +1,18 @@
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
 const CACHE_KEY = "monocons_wallpaper_id";
 const CACHE_DURATION_MS = 24 * 60 * 60 * 1000;
 
-export default function useWallpaper() {
-	const [wallpaperUrl, setWallpaperUrl] = useState(null);
+let cachedWallpaperUrl = null;
 
-	useEffect(() => {
-		const now = Date.now();
-		let selectedId = null;
+function getWallpaperUrl() {
+	if (cachedWallpaperUrl) return cachedWallpaperUrl;
+	if (typeof window === "undefined") return null;
 
+	const now = Date.now();
+	let selectedId = null;
+
+	try {
 		const cachedData = localStorage.getItem(CACHE_KEY);
 		if (cachedData) {
 			try {
@@ -34,9 +37,31 @@ export default function useWallpaper() {
 				}),
 			);
 		}
+	} catch (e) {
+		selectedId = Math.floor(Math.random() * 1084) + 1;
+	}
 
-		setWallpaperUrl(`https://picsum.photos/id/${selectedId}/1920/1080`);
-	}, []);
+	cachedWallpaperUrl = `https://picsum.photos/id/${selectedId}/1920/1080`;
+	return cachedWallpaperUrl;
+}
 
-	return wallpaperUrl;
+function subscribe(callback) {
+	const handleStorage = (event) => {
+		if (event.key === CACHE_KEY) {
+			cachedWallpaperUrl = null;
+			callback();
+		}
+	};
+	window.addEventListener("storage", handleStorage);
+	return () => window.removeEventListener("storage", handleStorage);
+}
+
+const getServerSnapshot = () => null;
+
+export default function useWallpaper() {
+	return useSyncExternalStore(
+		subscribe,
+		getWallpaperUrl,
+		getServerSnapshot,
+	);
 }
