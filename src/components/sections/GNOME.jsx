@@ -21,6 +21,7 @@ export default function GNOME() {
 			<Image
 				alt="Monocons sample screenshot"
 				height={1080}
+				sizes="(max-width: 800px) 100vw, 800px"
 				src="/images/sample-gnome.png"
 				style={{
 					borderRadius: "var(--md-sys-shape-corner-value-small)",

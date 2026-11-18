@@ -17,6 +17,7 @@ export default function Description() {
 			<Image
 				alt="Monocons sample screenshot"
 				height={2513}
+				sizes="(max-width: 768px) 100vw, 256px"
 				src="/images/sample.png"
 				style={{
 					width: "256px",

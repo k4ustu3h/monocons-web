@@ -12,6 +12,7 @@ export default function Wallpaper() {
 			alt="Wallpaper"
 			fill
 			priority
+			sizes="100vw"
 			src={wallpaperUrl}
 			style={{
 				objectFit: "cover",
