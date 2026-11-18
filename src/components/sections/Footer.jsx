@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 
 import { M3eHeading } from "@m3e/react/heading";
 
@@ -68,7 +69,7 @@ export default function Footer() {
 						© {year} Monocons Contributors
 					</M3eHeading>
 					<span>-</span>
-					<a
+					<Link
 						href="/privacy-policy"
 						onMouseEnter={() => setHovered(true)}
 						onMouseLeave={() => setHovered(false)}
@@ -77,7 +78,7 @@ export default function Footer() {
 						}}
 					>
 						Privacy Policy
-					</a>
+					</Link>
 				</div>
 			</div>
 		</footer>
