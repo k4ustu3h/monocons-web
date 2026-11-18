@@ -20,6 +20,10 @@ a {
 	color: inherit;
 }
 
+code {
+	background-color: var(--md-sys-color-surface-variant);
+}
+
 ol {
 	padding-left: 2rem;
 }

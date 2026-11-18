@@ -47,7 +47,6 @@ export default function Footer() {
 					</div>
 					<p
 						style={{
-							color: "var(--md-sys-color-on-surface-variant)",
 							lineHeight: "1.5",
 							margin: 0,
 							maxWidth: "300px",

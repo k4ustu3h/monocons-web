@@ -16,7 +16,7 @@ export default function ThemeWrapper({ children }) {
 	}, []);
 
 	return (
-		<M3eTheme color={seedColor || "#2962ff"}>
+		<M3eTheme color={seedColor || "#2962ff"} variant="expressive">
 			<div
 				style={{
 					opacity: mounted ? 1 : 0,
