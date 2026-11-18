@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "m3e": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@m3e/mcp"]
+    }
+  }
+}

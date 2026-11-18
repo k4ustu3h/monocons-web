@@ -11,6 +11,7 @@
 	"dependencies": {
 		"@evowizz/material-color-utilities-canary": "0.4.0-canary.1",
 		"@icons-pack/react-simple-icons": "13.15.1",
+		"@m3e/mcp": "2.13.2",
 		"@m3e/react": "2.13.2",
 		"@next/third-parties": "16.4.6",
 		"@nine-thirty-five/material-symbols-react": "2.6.0",
