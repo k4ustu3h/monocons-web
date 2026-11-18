@@ -1,8 +1,12 @@
+import { useState } from "react";
+
 import { M3eHeading } from "@m3e/react/heading";
 
 import Monocons from "@/assets/svgs/Monocons";
 
 export default function Footer() {
+	const [hovered, setHovered] = useState(false);
+
 	const year = new Date().getFullYear();
 
 	return (
@@ -53,9 +57,29 @@ export default function Footer() {
 						and brand logos.
 					</p>
 				</div>
-				<M3eHeading style={{ textAlign: "center" }} variant="title">
-					© {year} Monocons Contributors
-				</M3eHeading>
+
+				<div
+					style={{
+						display: "flex",
+						justifyContent: "center",
+						gap: "0.5rem",
+					}}
+				>
+					<M3eHeading style={{ textAlign: "center" }} variant="title">
+						© {year} Monocons Contributors
+					</M3eHeading>
+					<span>-</span>
+					<a
+						href="/privacy-policy"
+						onMouseEnter={() => setHovered(true)}
+						onMouseLeave={() => setHovered(false)}
+						style={{
+							textDecoration: hovered ? "underline" : "none",
+						}}
+					>
+						Privacy Policy
+					</a>
+				</div>
 			</div>
 		</footer>
 	);
