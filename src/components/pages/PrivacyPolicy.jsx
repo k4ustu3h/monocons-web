@@ -1,5 +1,7 @@
 "use client";
 
+import { ArrowBack } from "@nine-thirty-five/material-symbols-react/rounded";
+
 import { M3eButton } from "@m3e/react/button";
 import { M3eContentPane } from "@m3e/react/content-pane";
 import { M3eDivider } from "@m3e/react/divider";
@@ -18,7 +20,8 @@ export default function PrivacyPolicy() {
 		>
 			<div>
 				<M3eButton href="/" size="small" variant="tonal">
-					← Back to Home
+					<ArrowBack slot="icon" />
+					Back to Home
 				</M3eButton>
 			</div>
 			<M3eContentPane
