@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import useFetchIcons from "@/hooks/usefetchIcons";
 
@@ -6,10 +6,25 @@ import MonochromeIcon from "@/components/icons/MonochromeIcon";
 
 export default function Showcase() {
 	const { icons } = useFetchIcons();
+	const [iconsLoaded, setIconsLoaded] = useState(false);
+	const loadedCountRef = useRef(0);
 
-	const [loadedCount, setLoadedCount] = useState(0);
+	const handleLoad = useCallback(() => {
+		loadedCountRef.current += 1;
+		if (loadedCountRef.current >= icons.length) {
+			setIconsLoaded(true);
+		}
+	}, [icons.length]);
 
-	const iconsLoaded = icons.length > 0 && loadedCount >= icons.length;
+	useEffect(() => {
+		if (icons.length === 0) return;
+
+		const timeoutId = setTimeout(() => {
+			setIconsLoaded(true);
+		}, 3000);
+
+		return () => clearTimeout(timeoutId);
+	}, [icons.length]);
 
 	return (
 		<div
@@ -32,7 +47,7 @@ export default function Showcase() {
 				<MonochromeIcon
 					key={filename}
 					filename={filename}
-					onLoad={() => setLoadedCount((prev) => prev + 1)}
+					onLoad={handleLoad}
 				/>
 			))}
 		</div>
