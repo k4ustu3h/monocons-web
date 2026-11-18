@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { ArrowBack } from "@nine-thirty-five/material-symbols-react/rounded";
 
 import { M3eButton } from "@m3e/react/button";
@@ -19,10 +21,12 @@ export default function PrivacyPolicy() {
 			}}
 		>
 			<div>
-				<M3eButton href="/" size="small" variant="tonal">
-					<ArrowBack slot="icon" />
-					Back to Home
-				</M3eButton>
+				<Link href="/">
+					<M3eButton size="small" variant="tonal">
+						<ArrowBack slot="icon" />
+						Back to Home
+					</M3eButton>
+				</Link>
 			</div>
 			<M3eContentPane
 				style={{
