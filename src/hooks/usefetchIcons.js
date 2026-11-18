@@ -5,7 +5,7 @@ const GITHUB_API_URL =
 const CACHE_KEY = "monocons_showcase_cache";
 const CACHE_DURATION_MS = 24 * 60 * 60 * 1000;
 
-export default function fetchIcons() {
+export default function useFetchIcons() {
 	const [icons, setIcons] = useState([]);
 	const count = 160;
 

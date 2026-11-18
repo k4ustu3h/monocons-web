@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-import fetchIcons from "@/hooks/fetchIcons";
+import useFetchIcons from "@/hooks/usefetchIcons";
 
 import MonochromeIcon from "@/components/icons/MonochromeIcon";
 
 export default function Showcase() {
-	const { icons } = fetchIcons();
+	const { icons } = useFetchIcons();
 
 	const [loadedCount, setLoadedCount] = useState(0);
 
